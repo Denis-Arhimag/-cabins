@@ -1,0 +1,433 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+body {
+    background-color:#d2d6d9;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.logo img {
+    width: 200px;
+    height: 160px;
+}
+
+/* кнопка модального окна или заказать звонок */
+.modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* само модальное окно */
+.modal {
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    max-width: 95%;
+    max-height: 95%;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+input {
+    height: 40px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* само модальное окно */
+
+
+.modal-overlay--visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.modal--visible {
+    display: block;
+}
+
+/*Кнопка для перехода модальное окно  */
+
+
+.header-top {
+    min-height: 100%;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_information {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.header_tel {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.messengers {
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+}
+
+.watsap {
+    height: 100px;
+}
+
+.telegram {
+    height: 95px;
+}
+
+/* кнопка призыв */
+.call_container {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    justify-content: center;
+}
+
+.call_button {
+    padding-bottom: 15px;
+}
+
+.call_to_action_tel input {
+    height: 30px;
+}
+
+
+
+.call_to_action_button {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #ff9c00;
+    background-image: linear-gradient();
+    box-shadow:
+        inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.call_to_action_button:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+/* форма для номера */
+
+.header_tel .time {
+    font-size: 24px;
+    margin-left: auto;
+    font-weight: auto;
+}
+
+/* Навигация */
+
+.nav_container {
+    margin-bottom: 40px;
+    background-color: #3586ff;
+}
+
+.nav_list {
+    max-width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.nav_list li {
+    padding: 30px;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.nav_list li a:hover {
+    color: #fff;
+}
+
+/* Подсветка кнопки */
+.home {
+    background-color: #ff9c00;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #ff9c00;
+    background-image: linear-gradient();
+    box-shadow:
+        inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.home:hover {
+    background-color: rgba(255, 0, 0, 1);
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+/* Основной контент hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+.content {
+    width: 1180px;
+    height: 600px;
+    display: flex;
+    margin: 0 auto;
+
+}
+
+/* Призыв к действию */
+.call_to_action {
+    width: 1180px;
+    /* height: 150px; */
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.call_to_action_container .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: px;
+}
+
+.call_to_action_container .text {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text p {
+    font-size: 20px;
+}
+
+
+
+/* слайдер hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+
+.page-title {
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 700px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    display: flex;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid red;
+    font-size: 24px;
+    color: red;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.slider_container_text {
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+
+.information li {
+    padding-top: 10px;
+}
+
+/* слайдер hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+/* блок с категориями  */
+
+.main__name {
+    width: 1180px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 40px;
+}
+
+.container_categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.container_categories_block {
+    display: flex;
+    width: 30%;
+    height: 300px;
+    margin: 10px;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.blocks_button button {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    background-color: #ff9c00;
+    border-radius: 10px;
+    background-image: linear-gradient();
+    box-shadow:
+        inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.blocks_button button:hover {
+    background-color: rgba(255, 0, 0, 1);
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+
+
+/* подвал */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8px;
+
+}
+
+.social li,
+.menu li {
+    padding-left: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
